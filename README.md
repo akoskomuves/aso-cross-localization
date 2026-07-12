@@ -50,7 +50,7 @@ Claude Code picks up personal skills from `~/.claude/skills/` automatically. For
 
 ## The rest of the setup: 3 MCPs
 
-The skill covers the thinking. Three MCP servers (all mine, all open source) make it end to end:
+The skill covers the thinking. Three MCP servers make it end to end — kranked and appstoreconnect-mcp are mine, all three are open source:
 
 - **[kranked](https://github.com/akoskomuves/kranked)** does the keyword research: difficulty, popularity, suggestions, and live rank checks. The rank checks are how the agent confirms secondary-locale terms really index on the US store.
 - **[appstoreconnect-mcp](https://github.com/akoskomuves/appstoreconnect-mcp)** is what makes this more than a research toy: it writes the name and subtitle onto each AppInfo localization, keywords onto each version localization, and files the new version. Live, in App Store Connect, from the agent. It also handles pricing, PPP, subscriptions, and offers.
