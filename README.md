@@ -2,6 +2,8 @@
 
 A Claude Code skill that teaches your agent an App Store trick agencies charge for: cross-localization keyword expansion, run end to end from the agent.
 
+**Repo:** [github.com/akoskomuves/aso-cross-localization](https://github.com/akoskomuves/aso-cross-localization) · **Article:** [tallpoppy.xyz/aso-cross-localization](https://tallpoppy.xyz/aso-cross-localization/)
+
 Cross-localization is not a secret. Agencies know it, the big ASO tools all have guides on it, and almost no indie developer actually uses it, because doing it properly means juggling ten localizations, two rules that fail silently, and App Store Connect's worst UI.
 
 Which is exactly the kind of work agents are good at. This skill, plus three MCP servers, runs the whole loop from a single Claude Code session: keyword research, allocation, validation, writing to App Store Connect, and checking two weeks later whether it actually worked.
