@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% seo %}
+  <link rel="icon" href="/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#FAF9F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#141413" media="(prefers-color-scheme: dark)">
+  <script>
+    (function() {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+  <style>
+    :root {
+      --bg: #FAF9F5;
+      --bg-hover: #F0EEE6;
+      --text: #141413;
+      --text-muted: #5E5D59;
+      --text-soft: #8a8882;
+      --accent: #D97757;
+      --accent-hover: #C96442;
+      --border: rgba(20, 20, 19, 0.1);
+      --font-serif: 'Fraunces', Georgia, serif;
+      --font-sans: 'Inter', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg: #141413;
+      --bg-hover: #1f1f1d;
+      --text: #f0eee6;
+      --text-muted: #a5a39b;
+      --text-soft: #6e6c66;
+      --accent: #e08868;
+      --accent-hover: #f2a078;
+      --border: rgba(240, 238, 230, 0.1);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: var(--font-sans);
+      font-weight: 400;
+      line-height: 1.65;
+      color: var(--text);
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .site-header {
+      border-bottom: 1px solid var(--border);
+    }
+    .site-header .inner {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 18px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text);
+      text-decoration: none;
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+    }
+    .brand svg { height: 20px; width: auto; display: block; }
+    .repo-link {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-decoration: none;
+    }
+    .repo-link:hover { color: var(--accent); }
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 24px 72px;
+    }
+    h1, h2, h3 { font-family: var(--font-serif); font-weight: 500; line-height: 1.2; }
+    h1 { font-size: 2.1rem; margin-bottom: 0.6em; }
+    h2 { font-size: 1.45rem; margin: 2em 0 0.6em; }
+    h3 { font-size: 1.15rem; margin: 1.6em 0 0.5em; }
+    p, ul, ol { margin-bottom: 1.1em; }
+    ul, ol { padding-left: 1.4em; }
+    li { margin-bottom: 0.35em; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: var(--accent-hover); text-decoration: underline; }
+    code {
+      font-family: var(--font-mono);
+      font-size: 0.85em;
+      background: var(--bg-hover);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    pre {
+      background: var(--bg-hover);
+      padding: 16px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin-bottom: 1.1em;
+    }
+    pre code { background: none; padding: 0; font-size: 0.85rem; }
+    table {
+      display: block;
+      width: 100%;
+      overflow-x: auto;
+      border-collapse: collapse;
+      margin-bottom: 1.1em;
+      font-size: 0.9rem;
+    }
+    th, td { border: 1px solid var(--border); padding: 8px 12px; text-align: left; }
+    th { font-weight: 600; }
+    blockquote {
+      border-left: 3px solid var(--border);
+      padding-left: 16px;
+      color: var(--text-muted);
+      margin-bottom: 1.1em;
+    }
+    hr { border: none; border-top: 1px solid var(--border); margin: 2.5em 0; }
+    img { max-width: 100%; }
+    .site-footer {
+      border-top: 1px solid var(--border);
+    }
+    .site-footer .inner {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 20px 24px;
+      font-size: 0.85rem;
+      color: var(--text-soft);
+    }
+    .site-footer a { color: var(--text-muted); }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="inner">
+      <a class="brand" href="https://tallpoppy.xyz/">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" fill="none" stroke="currentColor" stroke-width="10" stroke-linecap="square"><line x1="20" y1="55" x2="140" y2="55"/><line x1="90" y1="55" x2="90" y2="225"/><circle cx="125" cy="100" r="35"/></svg>
+        <span>tallpoppy</span>
+      </a>
+      <a class="repo-link" href="https://github.com/akoskomuves/aso-cross-localization">GitHub &nearr;</a>
+    </div>
+  </header>
+  <main>
+    {{ content }}
+  </main>
+  <footer class="site-footer">
+    <div class="inner">
+      &copy; 2026 tallpoppy &middot; <a href="https://tallpoppy.xyz/">tallpoppy.xyz</a>
+    </div>
+  </footer>
+</body>
+</html>

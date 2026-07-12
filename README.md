@@ -78,4 +78,4 @@ On the indexing behavior: [aso.dev's cross-localization guide](https://aso.dev/m
 
 ## License
 
-MIT. I'm Akos — I build iOS apps as [Tall Poppy](https://tallpoppy.xyz).
+MIT. I'm Akos — I run [tallpoppy](https://tallpoppy.xyz), an independent software studio: mobile apps, web platforms, AI systems.
